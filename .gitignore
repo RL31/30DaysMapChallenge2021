@@ -1,3 +1,8 @@
+donnees/
+documentation/
+*.RDS
+
+
 # History files
 .Rhistory
 .Rapp.history
