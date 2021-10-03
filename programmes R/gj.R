@@ -4,21 +4,19 @@ library(extrafont)
 
 loadfonts(dev="win")
 
-manifs <- rgdal::readOGR("C:/Users/LZD5YQ/Desktop/GJ/donnees/17novembre2018.kml", "17 novembre 2018")%>% 
+manifs <- rgdal::readOGR("donnees/17novembre2018.kml", "17 novembre 2018")%>% 
   st_as_sf(crs=4326) %>% 
   st_transform(crs=2154)
 
-ndv <- read.csv("C:/Users/LZD5YQ/Desktop/GJ/donnees/FILO2018_DISP_COM.csv",sep=";") %>% 
+ndv <- read.csv("donnees/FILO2018_DISP_COM.csv",sep=";") %>% 
   select(CODGEO,Q218)
 
-ndv_communes <- st_read("C:/Users/LZD5YQ/Desktop/GJ/donnees/COMMUNE.shp") %>% 
+ndv_communes <- st_read("donnees/COMMUNE.shp") %>% 
   left_join(ndv,by=c("INSEE_COM"="CODGEO")) %>% 
   mutate(tr_ndv=cut(Q218,breaks = quantile(Q218,probs=c(0,0.33,0.66,1),na.rm=TRUE),
                     labels=c(1,2,3)))
 
 croisement <- st_intersection(manifs, ndv_communes %>% select(Q218,tr_ndv))
-
-croisement %>% count(tr_ndv)
 
 croisement %>%
   filter(!is.na(tr_ndv)) %>% 
