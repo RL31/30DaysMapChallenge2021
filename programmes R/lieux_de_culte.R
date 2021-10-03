@@ -59,7 +59,7 @@ regions <- st_read("donnees/REGION.shp") %>%
 
 lissage_decoupe <- st_intersection(lissage,reg)
 
-ggplot(data= lissage_decoupe %>% 
+ggplot(data= lissage %>% 
          mutate(taux=round(protestant/lieu*100,0)))+
   geom_sf(aes(fill=taux),color=NA)+
   scale_fill_viridis_b(name="Part des lieux de\ncultes protestants (%)")+
@@ -70,9 +70,9 @@ ggplot(data= lissage_decoupe %>%
   theme(legend.position = "bottom",
         plot.title.position = "plot",
         text=element_text(family="Calibri",color="black"),
-        plot.title = element_text(face="bold",size=20),
-        plot.subtitle = element_text(size=12),
-        plot.caption = element_text(face="italic",size = 8),
+        plot.title = element_text(face="bold",size=15),
+        plot.subtitle = element_text(size=8),
+        plot.caption = element_text(face="italic",size = 6),
         plot.background = element_rect(fill="white",color="white"))
 
 
