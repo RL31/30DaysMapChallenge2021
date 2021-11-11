@@ -1,16 +1,24 @@
 # 30DaysMapChallenge
 
 Day 1 - Points
-!(.jpeg)
+
+![GJ](https://github.com/RL31/30DaysMapChallenge2021/blob/9592f9c6d211a42b4748a525251cbfc1a60b0aea/sorties/giletsjaunes.jpeg)
 
 Day 3 - Polygons
-!(https://github.com/RL31/30DayChartChallenge/blob/7fe0408031680655d7a3e66272a9930205361d2a/img/part_to_whole.jpeg)
+
+![habitat](https://github.com/RL31/30DaysMapChallenge2021/blob/9592f9c6d211a42b4748a525251cbfc1a60b0aea/sorties/polygons.jpg)
 
 Day 4 - Hexagons
 
+![ardoises](https://github.com/RL31/30DaysMapChallenge2021/blob/9592f9c6d211a42b4748a525251cbfc1a60b0aea/sorties/toits_et_murs_ok.jpg)
+
 Day 6 - Red
 
+![rouge](https://github.com/RL31/30DaysMapChallenge2021/blob/9592f9c6d211a42b4748a525251cbfc1a60b0aea/sorties/montage_rouge_ok.jpeg)
+
 Day 7 - Green
+
+![vert](https://github.com/RL31/30DaysMapChallenge2021/blob/9592f9c6d211a42b4748a525251cbfc1a60b0aea/sorties/montage_vert.jpeg)
 
 Day 11 - 3D
 
