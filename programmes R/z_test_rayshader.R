@@ -43,7 +43,7 @@ library(sf)
 library(tidyverse)
 library(rgdal)
 
-list_file <- list.files ("BDALTIV2_MNT_25M_ASC_LAMB93_IGN69_D007/",
+list_file <- list.files ("donnees/BDALTIV2_MNT_25M_ASC_LAMB93_IGN69_D007/",
                          pattern = "*.asc", full.names = T) 
 
 f<-list.files(pattern=".asc", full.names = TRUE)

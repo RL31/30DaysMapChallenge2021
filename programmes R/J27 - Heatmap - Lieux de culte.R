@@ -123,15 +123,6 @@ saveRDS(lieux_de_culte,"donnees/place_of_worship.RDS")
 regions <- st_read("donnees/REGION.shp") %>% 
   summarise()
 
-
-# 
-# lieux_de_culte_FR <- st_intersection(lieux_de_culte,regions) %>%
-#   mutate(x=st_coordinates(.)[,1],
-#          y=st_coordinates(.)[,2]) %>%
-#   st_drop_geometry() %>%
-#   as.data.frame() %>%
-#   select(lieu,protestant,x, y)
-
 lissage_FR <- kernelSmoothing(dfObservations = lieux_de_culte,# donnees,
                               sEPSG = 2154,
                               iCellSize = 2000, #2000
@@ -141,13 +132,19 @@ lissage_FR <- kernelSmoothing(dfObservations = lieux_de_culte,# donnees,
   group_by(taux_tr) %>% 
   summarise()
 
-decoupe_
+europe <- st_read("donnees/CNTR_RG_10M_2020_3035.shp") %>%
+  filter(CNTR_ID %in% c("FR","UK","BE","LU","NL","ES","AD","IT","CH","DE","AT","LI")) %>% 
+  st_transform(2154)
 
-ggplot(data= lissage_FR)+
+decoupe <- lissage_FR %>% 
+  st_intersection(europe)
+
+ggplot(data= decoupe)+
   geom_sf(aes(fill=taux_tr),color=NA)+
   geom_sf(data=regions,fill=NA,color="white")+
-  scale_fill_viridis(name="Part des lieux de\nculte protestants (%)",
+  scale_fill_viridis(name="Part des lieux de\nculte protestants\n(% lissé)",
                      option = "cividis",
+                     direction = 1,
                      discrete=TRUE,
                      labels=c("[0,1]"="Moins d'1 %",
                               "(1,5]"="De 1 % à 5 %",
@@ -155,7 +152,8 @@ ggplot(data= lissage_FR)+
                               "(10,15]"="De 10 % à 15 %",
                               "(15,20]"="De 15 % à 20 %",
                               "(20,25]"="De 20 à 25 %",
-                              "(25,50]"="De 25 % à 50 %"))+
+                              "(25,50]"="De 25 % à 50 %",
+                              "(50,75]"="De 50 % à 75 %"))+
   labs(title="Principaux territoires du protestantisme en France",
        subtitle="Présence de lieux de culte protestants en France métropolitaine",
        caption="Sources : contributions OpenStreetMap, \"place_of_worship\"\nTraitements et erreurs : Re_Mi_La\n ")+
@@ -166,9 +164,10 @@ ggplot(data= lissage_FR)+
         plot.title.position = "plot",
         text=element_text(family="Calibri",color="black"),
         plot.title = element_text(face="bold",size=15),
-        plot.subtitle = element_text(size=8),
-        plot.caption = element_text(face="italic",size = 6),
-        plot.background = element_rect(fill="white",color="white"))
+        plot.subtitle = element_text(size=10),
+        plot.caption = element_text(face="italic",size = 10),
+        plot.background = element_rect(fill="white",color="white"))+
+  guides(fill=guide_legend(nrow=4,bycol=TRUE))
 
-
-ggsave("sorties/lieux_de_cultes2.jpeg")
+ggsave("sorties/lieux_de_cultes.jpeg", 
+       width = 1350,height = 1800, dpi=300,units = "px")
