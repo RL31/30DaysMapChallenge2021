@@ -115,3 +115,20 @@ render_snapshot(title_text = "Le Mont Gerbier de Jonc en 1953",
 render_snapshot(title_text = "La vallée de l'Ardèche à Pont-de-Labeaume en 1953\nIGN, BD ORTHO",
                 title_bar_color = "#F2E1D0", title_color = "gray20", title_bar_alpha = 1)
 
+
+
+# a tester
+angles= seq(0,360,length.out = 1441)[-1]
+for(i in 1:1440) {
+  render_camera(theta=-45+angles[i])
+  render_snapshot(filename = sprintf("zionpark%i.png", i), 
+                  title_text = "Zion National Park, Utah | Imagery: Landsat 8 | DEM: 30m SRTM",
+                  title_bar_color = "#1f5214", title_color = "white", title_bar_alpha = 1)
+}
+rgl::rgl.close()
+
+#av::av_encode_video(sprintf("zionpark%d.png",seq(1,1440,by=1)), framerate = 30,
+# output = "zionpark.mp4")
+
+rgl::rgl.close()
+system("ffmpeg -framerate 60 -i zionpark%d.png -pix_fmt yuv420p zionpark.mp4")
