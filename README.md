@@ -23,3 +23,11 @@ Day 7 - Green
 Day 11 - 3D
 
 ![Gerbier](https://github.com/RL31/30DaysMapChallenge2021/blob/501334b424457c69a6cfa4e5d0f062b2b5a1d7f3/sorties/J11%20-%203D%20-%20Gerbier_ok.jpeg)
+
+Day 17 - Land
+
+![chataignier](https://github.com/RL31/30DaysMapChallenge2021/blob/5a7e34191db58118b47c73b1ff4f362c84bd4378/sorties/chataigneraies.jpeg)
+
+Day 26 - Choropleth
+
+![meteo](https://github.com/RL31/30DaysMapChallenge2021/blob/5a7e34191db58118b47c73b1ff4f362c84bd4378/sorties/alertes_meteo2.jpg)
