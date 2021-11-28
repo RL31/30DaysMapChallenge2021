@@ -39,7 +39,7 @@ angle_le_plus_long <- segments %>%
   mutate(max=max(longueur_totale)) %>% 
   filter(longueur_totale==max)
 
-
+# représentation reprise de https://gist.github.com/dakvid/ee9d5323f5d5ddad3ff299d778d74eef
 ggplot(angle_le_plus_long,
        aes(x = azimuth,
            weight = longueur_totale)) +

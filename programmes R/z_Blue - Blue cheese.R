@@ -48,13 +48,12 @@ bleus_cantons <- bleus %>%
 
 communes <- st_read("donnees/COMMUNE.shp")
 
-communes_appariees <- bleus_communes %>% 
-  mutate(commune=str_replace_all(commune," ","")) %>% 
-  anti_join(communes %>% 
-               select(INSEE_DEP,NOM_COM) %>% 
-               mutate(NOM_COM=str_replace_all(NOM_COM," ","")),
-             by=c("dpt"="INSEE_DEP","commune"="NOM_COM")) 
-  # %>% 
+communes_appariees <- communes %>% 
+  select(INSEE_DEP,NOM_COM) %>% 
+  mutate(NOM_COM=str_replace_all(NOM_COM," ","")) %>% 
+  inner_join(bleus_communes %>% 
+  mutate(commune=str_replace_all(commune," ","")),
+             by=c("INSEE_DEP"="dpt","NOM_COM"="commune")) %>% 
   group_by(fromage) %>% 
   summarise()
 
@@ -116,7 +115,7 @@ bleus_sf %>%
 carte_bleu <- function(FROMAGE){
   carte <- bleus_sf %>% 
     filter(fromage==FROMAGE) %>% 
-    ggplot()+
+    ggplot(data=.)+
     geom_sf(data = FR, fill=NA, color="white",alpha=.1)+
     geom_sf(fill="aquamarine4",color=NA,alpha=.9)+
 #    labs(     caption="Sources : Commission européenne, Registre des produits de qualité\nIGN, Admin Express COG\nTraitements et erreurs : Re_Mi_La")+

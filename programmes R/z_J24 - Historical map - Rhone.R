@@ -7,7 +7,7 @@ library(scales)
 
 # image georeferencee
 rhone <- brick("donnees/tuto_rayshader/Rhone_a_glun_mauves_1784_georef.tif")
-#plotRGB(rhone)
+plotRGB(rhone)
 
 liste_asc <- list.files ("donnees/BDALTIV2_MNT_25M_ASC_LAMB93_IGN69_D007/",
                          pattern = "*.asc", full.names = T) 
