@@ -169,7 +169,7 @@ geom_text()+
 
 titre <- ggplot() + 
   annotate("text", x = 2, y = 25, size=6, 
-           label = "Aire géographiquesTerritoires de production\ndu lait des bleus\navec AOP",
+           label = "Aire géographiques de production\nlaitière des bleus\navec AOP",
            colour="aquamarine4",
            hjust=0) + 
   lims(x=c(2,10))+
