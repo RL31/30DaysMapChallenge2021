@@ -13,6 +13,8 @@ Day 3 - Polygons
 
 Day 4 - Hexagons
 
+Lorsque la terre était argileuse, on a construit des murs en brique. Lorsque le sol était rocheux, on a mis des pierres sur les toits.
+
 ![ardoises](https://github.com/RL31/30DaysMapChallenge2021/blob/9592f9c6d211a42b4748a525251cbfc1a60b0aea/sorties/toits_et_murs_ok.jpg)
 
 Day 6 - Red
@@ -37,3 +39,7 @@ Day 17 - Land
 Day 26 - Choropleth
 
 ![meteo](https://github.com/RL31/30DaysMapChallenge2021/blob/5a7e34191db58118b47c73b1ff4f362c84bd4378/sorties/alertes_meteo2.jpg)
+
+Day 27 - Heatmap
+
+![heatmap](https://github.com/RL31/30DaysMapChallenge2021/blob/0e83cd04304b5ad8f1241f11b0c86dffae83faaa/sorties/lieux_de_cultes.jpeg)
