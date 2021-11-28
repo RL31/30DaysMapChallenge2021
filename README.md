@@ -2,6 +2,9 @@
 
 Day 1 - Points
 
+Représenter les premiers lieux de blocage des gilets jaunes uniquement à l'aide de points permet d'en saisir une spécificité. Une représentation similaire pour des manifestations plus traditionnelles
+ne ferait ressortir que les grandes villes de métropole. Ici, les points font apparaître l'hexagone, démontrant l'implantation de ce mouvement dans de très nombreux territoires, notamment les plus pauvres.
+
 ![GJ](https://github.com/RL31/30DaysMapChallenge2021/blob/9592f9c6d211a42b4748a525251cbfc1a60b0aea/sorties/giletsjaunes.jpeg)
 
 Day 3 - Polygons
@@ -13,6 +16,9 @@ Day 4 - Hexagons
 ![ardoises](https://github.com/RL31/30DaysMapChallenge2021/blob/9592f9c6d211a42b4748a525251cbfc1a60b0aea/sorties/toits_et_murs_ok.jpg)
 
 Day 6 - Red
+
+La couleur rouge est très présente dans la toponymie française. Dans le nord, ce seront les croix, à l'est les champs et les terres, au centre les maisons.
+La rareté de cette couleur dans le Finistère, l'Alsace-Moselle et la Provence résulte peut-être de l'origine linguistique différente des noms de lieux (rouge ne se dit pas rouge...).
 
 ![rouge](https://github.com/RL31/30DaysMapChallenge2021/blob/9592f9c6d211a42b4748a525251cbfc1a60b0aea/sorties/montage_rouge_ok.jpeg)
 
