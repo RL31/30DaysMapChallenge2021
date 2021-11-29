@@ -13,13 +13,13 @@ Day 3 - Polygons
 
 Day 4 - Hexagons
 
-Lorsque la terre était argileuse, on a construit des murs en brique. Lorsque le sol était rocheux, on a mis des pierres sur les toits.
+Lorsque la terre était argileuse, on a construit des murs en briques. Lorsque le sol était rocheux, on a mis des pierres sur les toits.
 
 ![ardoises](https://github.com/RL31/30DaysMapChallenge2021/blob/9592f9c6d211a42b4748a525251cbfc1a60b0aea/sorties/toits_et_murs_ok.jpg)
 
 Day 6 - Red
 
-La couleur rouge est très présente dans la toponymie française. Dans le nord, ce seront les croix, à l'est les champs et les terres, au centre les maisons.
+La couleur rouge est très présente dans la toponymie française. Dans le nord, ce sont les croix, à l'est les champs et les terres, au centre les maisons.
 La rareté de cette couleur dans le Finistère, l'Alsace-Moselle et la Provence résulte peut-être de l'origine linguistique différente des noms de lieux (rouge ne se dit pas rouge...).
 
 ![rouge](https://github.com/RL31/30DaysMapChallenge2021/blob/9592f9c6d211a42b4748a525251cbfc1a60b0aea/sorties/montage_rouge_ok.jpeg)
